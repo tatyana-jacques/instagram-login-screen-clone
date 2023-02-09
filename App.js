@@ -10,6 +10,16 @@ export default function LoginInstagram() {
   const [user, userName] = useState("")
   const [pass, passWord] = useState("")
 
+  function enter() {
+    if (user && pass) {
+      alert(user + " " + pass)
+    }
+    else {
+      alert("Insira usuário e senha!")
+    }
+
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor="#589CB5" />
@@ -48,7 +58,7 @@ export default function LoginInstagram() {
             onChangeText={passWord} />
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => alert(user + " " + pass)}>
+        <TouchableOpacity style={styles.button} onPress={enter}>
           <Text style={styles.buttonText}  >Entrar</Text>
         </TouchableOpacity>
 
