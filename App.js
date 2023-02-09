@@ -3,7 +3,7 @@ import { SafeAreaView, Text, TextInput, StyleSheet, Image, View, TouchableOpacit
 import { LinearGradient } from 'expo-linear-gradient'
 import instagram from "./assets/instagramLogo.png"
 import facebookLogo from "./assets/facebookLogo.png"
-import {useState} from "react"
+import { useState } from "react"
 
 export default function LoginInstagram() {
 
@@ -34,8 +34,8 @@ export default function LoginInstagram() {
             placeholder="Digite seu nome de usuário"
             placeholderTextColor={"rgba(255,255,255,0.2)"}
             selectionColor="#fff"
-            keyboardType="email-address" 
-            onChangeText = {userName}/>
+            keyboardType="email-address"
+            onChangeText={userName} />
         </View>
 
         <View style={styles.input}>
@@ -45,10 +45,10 @@ export default function LoginInstagram() {
             placeholderTextColor={"rgba(255,255,255,0.2)"}
             selectionColor="#fff"
             secureTextEntry
-            onChangeText = {passWord} />
+            onChangeText={passWord} />
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={()=>alert(user +" " + pass)}>
+        <TouchableOpacity style={styles.button} onPress={() => alert(user + " " + pass)}>
           <Text style={styles.buttonText}  >Entrar</Text>
         </TouchableOpacity>
 
@@ -56,17 +56,16 @@ export default function LoginInstagram() {
           <Text style={styles.loginForgotText}>Esqueceu seus dados? Obtenha ajuda para entrar.</Text>
         </TouchableOpacity>
 
-        <View style ={styles.or}>
+        <View style={styles.or}>
           <View style={styles.line}></View>
           <Text style={styles.orText}>OU</Text>
-          <View style = {styles.line}></View>
+          <View style={styles.line}></View>
         </View>
 
-        <View style ={styles.or}>
-        <Image style = {styles.facebookLogo} source = {facebookLogo}/>
-        <Text style={styles.orText}>Entrar com o facebook</Text>
-
-        </View>
+        <TouchableOpacity style={styles.or}>
+          <Image style={styles.facebookLogo} source={facebookLogo} />
+          <Text style={styles.orText}>Entrar com o facebook</Text>
+        </TouchableOpacity>
 
       </LinearGradient>
 
@@ -146,13 +145,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 10,
   },
-  
-  line:{
-    width:"30%",
+
+  line: {
+    width: "30%",
     margin: 5,
     height: 1,
     backgroundColor: "rgba(255,255,255,0.7)"
-    },
+  },
 
   orText: {
     color: "rgba(255,255,255,0.7)",
@@ -162,7 +161,7 @@ const styles = StyleSheet.create({
 
   facebookLogo: {
     width: 40,
-    height:40,
+    height: 40,
     tintColor: "#fff"
   }
 
